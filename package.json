@@ -1,0 +1,39 @@
+{
+  "name": "garnet",
+  "version": "0.1.0",
+  "description": "A remote browser isolation prototype that replays remote browser draw commands via WebAssembly in local.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ECS-251-W2020/final-project-sudo.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ECS-251-W2020/final-project-sudo/issues"
+  },
+  "homepage": "https://github.com/ECS-251-W2020/final-project-sudo#readme",
+  "dependencies": {
+    "koa": "^2.11.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "nodemon": "^2.0.2",
+    "prettier-standard": "^16.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard --lint"
+    ]
+  }
+}
