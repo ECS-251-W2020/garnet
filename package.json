@@ -19,7 +19,8 @@
   "homepage": "https://github.com/ECS-251-W2020/final-project-sudo#readme",
   "dependencies": {
     "koa": "^2.11.0",
-    "koa-socket-2": "^1.2.0"
+    "koa-socket-2": "^1.2.0",
+    "koa-static": "^5.0.0"
   },
   "devDependencies": {
     "husky": "^4.2.3",
