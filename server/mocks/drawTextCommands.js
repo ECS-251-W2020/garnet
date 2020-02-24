@@ -1,5 +1,6 @@
-const commands = [
-  ['SkCanvas', 'drawText', 'Hello World!', '100', '100'],
+// Construct commands to draw the input text string
+const commands = text => [
+  ['SkCanvas', 'drawText', text, '100', '100'],
   ['SkCanvas', 'flush']
 ]
 
