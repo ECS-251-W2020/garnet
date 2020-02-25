@@ -20,6 +20,7 @@
       onclick="showCoords(event)"
       onmousemove="showCoordsx(event)"
       onmouseout="clearCoor()"
+      onwheel="wheelY(event)"
     >
       <p id="demo"></p>
     </div>
@@ -45,6 +46,11 @@
 
       function clearCoor () {
         document.getElementById('demo').innerHTML = ''
+      }
+      function wheelY(event) {
+        var y = event.deltaY;
+        var wheelMove = "Wheel move: " + y
+        document.getElementById("demo").innerHTML = wheelMove;
       }
     </script>
   </body>
