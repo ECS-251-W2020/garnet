@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO Chat & Draw Text</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <canvas
+      id="main"
+      width="1000"
+      height="1000"
+      style="border:1px solid"
+    ></canvas>
+    <form action=""><input autocomplete="off" /><button>Send</button></form>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../../../node_modules/canvaskit-wasm/bin/canvaskit.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

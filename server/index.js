@@ -6,7 +6,7 @@ const app = new Koa()
 const io = new SocketIO()
 const PORT = 3000
 
-app.use(serve('client'))
+app.use(serve('.'))
 
 app.use(ctx => {
   ctx.body = 'Hello World!'

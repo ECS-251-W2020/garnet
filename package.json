@@ -5,7 +5,8 @@
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier-standard --lint --fix"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier-standard --lint"
+      "prettier-standard --lint --fix"
     ]
   }
 }

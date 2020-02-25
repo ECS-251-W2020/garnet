@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "io": "readonly",
+    "browser": "readonly",
+    "CanvasKitInit": "readonly"
+  }
+}
