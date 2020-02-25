@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 500px;
+        height: 300px;
+        border: 1px solid black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click in the div element below to get the x (horizontal) and y (vertical)
+      coordinates of the mouse pointer, when it is clicked.
+    </p>
+
+    <div
+      onclick="showCoords(event)"
+      onmousemove="showCoordsx(event)"
+      onmouseout="clearCoor()"
+    >
+      <p id="demo"></p>
+    </div>
+
+    <p><strong>Tip:</strong> Try to click different places in the div.</p>
+
+    <script>
+      function showCoords (event) {
+        var cX = event.clientX
+        var sX = event.screenX
+        var cY = event.clientY
+        var sY = event.screenY
+        var coords1 = 'client - X: ' + cX + ', Y coords: ' + cY
+        var coords2 = 'screen - X: ' + sX + ', Y coords: ' + sY
+        document.getElementById('demo').innerHTML = coords1 + '<br>' + coords2
+      }
+      function showCoordsx (event) {
+        var x = event.clientX
+        var y = event.clientY
+        var coor = 'X coords: ' + x + ', Y coords: ' + y
+        document.getElementById('demo').innerHTML = coor
+      }
+
+      function clearCoor () {
+        document.getElementById('demo').innerHTML = ''
+      }
+    </script>
+  </body>
+</html>

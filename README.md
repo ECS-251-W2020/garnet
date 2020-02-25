@@ -19,3 +19,9 @@ Start server:
 ```
 npm start
 ```
+
+## Demo
+
+Enter the demo URL in browser:
+
+- Draw text: `localhost:3000/client/demo/draw-text/index.html`
