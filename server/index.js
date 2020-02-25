@@ -24,9 +24,10 @@ io.on('disconnect', () => {
 
 io.on('message', (ctx, data) => {
   console.log('client sent data to message endpoint: ', data)
+  const { text, x, y } = data
 
   // Deliver mock draw commands to client for testing
-  const commands = require('./mocks/drawTextCommands')(data)
+  const commands = require('./mocks/drawTextCommands')(text, x, y)
   io.broadcast('message', commands)
 })
 
