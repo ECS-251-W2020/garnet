@@ -7,33 +7,55 @@ form.addEventListener('submit', onSubmit)
 window.addEventListener('load', resizeCanvas)
 window.addEventListener('resize', resizeCanvas)
 
-let x = 100
-let y = 100
+init()
 
-// draw simple text using CanvasKit (skia + webAssembly)
-CanvasKitInit({
-  locateFile: file => '/node_modules/canvaskit-wasm/bin/' + file
-})
-  .ready()
-  .then(CanvasKit => {
-    socket.on('message', drawText)
+let x = 60
+let y = 60
 
-    const surface = CanvasKit.MakeCanvasSurface('main')
+// Draw simple text using CanvasKit (skia + webAssembly)
+async function init() {
+  const CanvasKit = await CanvasKitInit({
+    locateFile: file => '/node_modules/canvaskit-wasm/bin/' + file
+  }).ready()
+  const surface = CanvasKit.MakeCanvasSurface('main')
 
-    if (!surface) {
-      throw new Error('Could not make surface')
-    }
+  if (!surface) {
+    throw new Error('Could not make surface')
+  }
 
-    const skCanvas = surface.getCanvas()
-    const skFont = new CanvasKit.SkFont(null, 18)
-    const skPaint = new CanvasKit.SkPaint()
-    let drawCommands = ''
-
-    function drawText(commands) {
-      drawCommands += commands
-      eval(drawCommands)
-    }
+  socket.emit('message', {
+    text: 'Hi there, welcome to the chat room!',
+    x,
+    y,
+    fontSize: 20
   })
+
+  y += 50
+
+  socket.emit('message', {
+    text: 'All messages are rendered by the WebAssembly build of Skia.',
+    x,
+    y,
+    fontSize: 20
+  })
+
+  socket.on('message', drawText)
+
+  const skCanvas = surface.getCanvas()
+  let skFont, skPaint
+  let drawCommands = ''
+
+  function drawText(commands) {
+    console.info('=== Draw Commands === \n' + commands)
+
+    drawCommands += commands
+
+    // Execute draw commands
+    eval(drawCommands)
+
+    skCanvas.flush()
+  }
+}
 
 function onSubmit(event) {
   event.preventDefault()
