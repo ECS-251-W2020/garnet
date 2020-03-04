@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Customized Webpage with Draw Text</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    
+   
+  </head>
+
+  <body>
+    <ul id="messages"></ul>
+    <canvas id='main'></canvas>
+    <form action=""><input autocomplete="off" /><button>Send</button></form>
+
+    <script src="https://unpkg.com/canvaskit-wasm@0.3.0/bin/canvaskit.js"></script>
+    <script>
+CanvasKitInit({
+     locateFile: (file) => 'https://unpkg.com/canvaskit-wasm@0.3.0/bin/'+file,
+}).ready().then((() => console.log(1)))
+    </script>
+    
+    <!-- <script src="./draw-text.js"></script> -->
+  </body>
+
+</html>

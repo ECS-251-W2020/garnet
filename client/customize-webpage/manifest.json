@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "modify-page-to-draw",
+    "version": "1.0",
+  
+    "permissions": [
+      "tabs"
+    ],
+  
+    "chrome_url_overrides" : {
+      "newtab": "draw-text.html"
+    },
+
+    "browser_action": {
+      "default_icon": "icon.png"
+    },
+
+    "background" : {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+
+    "content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng=' 'unsafe-eval' https://unpkg.com; object-src 'self'"
+
+  } 

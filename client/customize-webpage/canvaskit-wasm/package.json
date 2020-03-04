@@ -1,0 +1,37 @@
+{
+  "_from": "canvaskit-wasm@^0.12.0",
+  "_id": "canvaskit-wasm@0.12.0",
+  "_inBundle": false,
+  "_integrity": "sha512-o3IiEQQxMw5HHS1cdZIE2gOCrqExmfoEropI+Go1zjZiV5xYKjOXn+jHQNb7tiMe5zqIUEynBzLJuELUGiPKwQ==",
+  "_location": "/canvaskit-wasm",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "canvaskit-wasm@^0.12.0",
+    "name": "canvaskit-wasm",
+    "escapedName": "canvaskit-wasm",
+    "rawSpec": "^0.12.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.12.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/canvaskit-wasm/-/canvaskit-wasm-0.12.0.tgz",
+  "_shasum": "6844151028f81e4e5478cff55c104cdd1d66ba71",
+  "_spec": "canvaskit-wasm@^0.12.0",
+  "_where": "/Users/rachelguo/Desktop/sudo_project/sudo-project-star-star/client/customize-webpage",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A WASM version of Skia's Canvas API",
+  "homepage": "https://github.com/google/skia/tree/master/modules/canvaskit",
+  "license": "BSD-3-Clause",
+  "main": "bin/canvaskit.js",
+  "name": "canvaskit-wasm",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.12.0"
+}
