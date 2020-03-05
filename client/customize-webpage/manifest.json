@@ -8,7 +8,7 @@
     ],
   
     "chrome_url_overrides" : {
-      "newtab": "draw-text.html"
+      "newtab": "index.html"
     },
 
     "browser_action": {
