@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "modify-page-to-draw",
+    "version": "1.0",
+  
+    "permissions": [
+      "tabs"
+    ],
+  
+    "chrome_url_overrides" : {
+      "newtab": "index.html"
+    },
+
+    "browser_action": {
+      "default_icon": "icon.png"
+    },
+
+    "background" : {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-7P2Bh+JJW8oNzd7iUDclm94UV2c32sQ5fYPgMJeW1kw=' https://unpkg.com/ https://cdnjs.cloudflare.com/; object-src 'self'"
+
+  } 
