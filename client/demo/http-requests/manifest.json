@@ -6,12 +6,10 @@
 
   "permissions": [
     "webRequest",
-    "webRequestBlocking",
-    "https://developer.mozilla.org/",
-    "https://mdn.mozillademos.org/"
+    "<all_urls>"   
   ],
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["intercept-http.js"]
   }
 }
