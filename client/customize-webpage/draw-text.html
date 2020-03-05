@@ -11,15 +11,9 @@
     <ul id="messages"></ul>
     <canvas id='main'></canvas>
     <form action=""><input autocomplete="off" /><button>Send</button></form>
-
-    <script src="https://unpkg.com/canvaskit-wasm@0.3.0/bin/canvaskit.js"></script>
-    <script>
-CanvasKitInit({
-     locateFile: (file) => 'https://unpkg.com/canvaskit-wasm@0.3.0/bin/'+file,
-}).ready().then((() => console.log(1)))
-    </script>
-    
-    <!-- <script src="./draw-text.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://unpkg.com/canvaskit-wasm@0.13.0/bin/canvaskit.js"></script>
+    <script src="./draw-text.js"></script>
   </body>
 
 </html>

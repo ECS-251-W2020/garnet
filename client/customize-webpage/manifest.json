@@ -19,7 +19,6 @@
       "scripts": ["background.js"],
       "persistent": false
     },
-
-    "content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng=' 'unsafe-eval' https://unpkg.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' 'unsafe-eval' 'sha256-7P2Bh+JJW8oNzd7iUDclm94UV2c32sQ5fYPgMJeW1kw=' https://unpkg.com/ https://cdnjs.cloudflare.com/; object-src 'self'"
 
   } 
