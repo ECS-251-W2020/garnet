@@ -19,10 +19,10 @@
   },
   "homepage": "https://github.com/ECS-251-W2020/final-project-sudo#readme",
   "dependencies": {
-    "canvaskit-wasm": "file:client/web-extension/canvaskit-wasm",
     "koa": "^2.11.0",
     "koa-socket-2": "^1.2.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "puppeteer-core": "^2.1.1"
   },
   "devDependencies": {
     "husky": "^4.2.3",
