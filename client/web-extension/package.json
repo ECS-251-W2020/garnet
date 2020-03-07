@@ -1,0 +1,15 @@
+{
+  "name": "web-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "canvaskit-wasm": "^0.13.0",
+    "socket.io": "^2.3.0"
+  }
+}

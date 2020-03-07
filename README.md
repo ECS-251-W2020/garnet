@@ -8,6 +8,24 @@ A remote browser isolation prototype that replays remote browser draw commands v
 
 ## Development
 
+### Client
+
+```
+cd client/web-extension
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+### Server
+
+```
+cd server
+```
+
 Install dependencies:
 
 ```
