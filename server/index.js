@@ -12,12 +12,6 @@ const io = new SocketIO()
 
 app.use(serve('.'))
 
-app.use(ctx => {
-  ctx.body = 'Hello World!'
-})
-
-let browser
-
 io.attach(app)
 
 io.on('connection', async () => {
@@ -31,13 +25,13 @@ io.on('disconnect', async () => {
 io.on('ready', async (ctx, url) => {
   console.log('URL: %s', url)
 
-  browser = await puppeteer.launch({
+  const browser = await puppeteer.launch({
     executablePath: CHROMIUM_PATH
-    // devtools: true
   })
 
   const page = await browser.newPage()
   await page.goto(url)
+
   const text = await page.evaluate(() => document.body.innerText)
   const textList = text
     .replace("'", '\x27')
@@ -46,10 +40,10 @@ io.on('ready', async (ctx, url) => {
     .filter(text => text !== '')
 
   const createCommands = require('./mocks/drawTextCommands')
-  let y = 100
+  let y = 60
 
   textList.forEach(text => {
-    const commands = createCommands({ text, x: 100, y })
+    const commands = createCommands({ text, x: 60, y })
     y += 30
 
     io.broadcast('draw', commands)
