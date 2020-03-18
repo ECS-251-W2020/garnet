@@ -4,8 +4,7 @@ const serve = require('koa-static')
 const puppeteer = require('puppeteer-core')
 
 const PORT = 3000
-const CHROMIUM_PATH =
-  '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary'
+const CHROMIUM_PATH = '/Applications/Chromium.app/Contents/MacOS/Chromium'
 
 const app = new Koa()
 const io = new SocketIO()
@@ -22,14 +21,16 @@ io.on('disconnect', async () => {
   console.log('a client disconnected')
 })
 
-io.on('ready', async (ctx, url) => {
-  console.log('URL: %s', url)
+io.on('ready', async (_, url) => {
+  console.log('Launching browser...')
 
   const browser = await puppeteer.launch({
     executablePath: CHROMIUM_PATH
   })
 
   const page = await browser.newPage()
+
+  console.log('Go to page: %s', url)
   await page.goto(url)
 
   const text = await page.evaluate(() => document.body.innerText)
@@ -42,8 +43,11 @@ io.on('ready', async (ctx, url) => {
   const createCommands = require('./mocks/drawTextCommands')
   let y = 60
 
+  console.log('Sending draw commands to client...')
+
   textList.forEach(text => {
     const commands = createCommands({ text, x: 60, y })
+
     y += 30
 
     io.broadcast('draw', commands)

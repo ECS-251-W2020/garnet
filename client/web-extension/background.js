@@ -1,4 +1,3 @@
-// const pattern = '*://*/*'
 const pattern = 'https://*/*'
 const extensionPageUrl = browser.runtime.getURL('index.html')
 

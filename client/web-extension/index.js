@@ -1,5 +1,5 @@
 const socket = io.connect('http://localhost:3000')
-const url = 'https://en.wikipedia.org/wiki/Operating_system'
+const url = 'https://duckduckgo.com/?t=ffab&q=operating+system&ia=web'
 
 init()
 
@@ -24,11 +24,10 @@ async function init() {
   socket.on('done', () => skCanvas.flush())
 
   const skCanvas = surface.getCanvas()
-  let skFont, skPaint
+  const skFont = new CanvasKit.SkFont(null, 14)
+  const skPaint = new CanvasKit.SkPaint()
 
   // Draw loading message
-  skFont = new CanvasKit.SkFont(null, 20)
-  skPaint = new CanvasKit.SkPaint()
   skPaint.setStyle(CanvasKit.PaintStyle.Fill)
   skPaint.setAntiAlias(true)
   skCanvas.drawText(
