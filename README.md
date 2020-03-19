@@ -4,7 +4,7 @@ Garnet is a secure and performant browser isolation prototype that replays remot
 
 ## Overview
 
-Garnet consists of three major components: [Browser Extension](#browser-extension), [Server](#server), [Modified Chromium](#modified-chromium).
+Garnet consists of three major components: [Browser Extension](#browser-extension), [Server](#server) and [Modified Chromium](#modified-chromium).
 
 ![Garnet Archetecture](https://github.com/ECS-251-W2020/final-project-sudo/blob/update-readme/garnet-architecture.png)
 
@@ -47,23 +47,26 @@ Here we present where major components are located and their key files.
 
 ### Server
 
-Install [Nodejs](https://nodejs.org) (>= 10.13.0).
+1. Install [Nodejs](https://nodejs.org) (>= 10.13.0).
 
-Clone the repo:
+2. Clone the repo:
 
 ```
 git clone https://github.com/ECS-251-W2020/final-project-sudo.git
+git submodule init
+git submodule update
 ```
 
-Compile the modified chromium to executable. Refer to [chromium.org](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)(skip "Get the code")
+3. Compile the modified chromium to executable. Refer to [chromium.org](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)(skip "Get the code")
 
-Install dependencies:
+4. Install dependencies:
 
 ```
-cd server && npm install
+cd server
+npm install
 ```
 
-Start the server:
+5. Start the server:
 
 ```
 npm start
