@@ -17,21 +17,21 @@ For more details:
 
 ## Setting Up Garnet Server
 1. Install the prerequisites
-  - [Nodejs](https://nodejs.org) (>= 10.13.0)
+    - [Nodejs](https://nodejs.org) (>= 10.13.0)
 2. Clone the repo
-  - `git clone https://github.com/ECS-251-W2020/final-project-sudo.git`
+    - `git clone https://github.com/ECS-251-W2020/final-project-sudo.git`
 3. Compile the modified chromium to executable
-  - refer to [chromium.org](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)(skip "Get the code")
+    - refer to [chromium.org](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)(skip "Get the code")
  4. Install dependencies
-  - `cd server && npm install`
+    - `cd server && npm install`
  5. Starting the server
-  - `npm start`
+    - `npm start`
   
 ## Using Garnet Client
 1. Install the web extension in local browser
-  - Open the Extension Management page by navigating to chrome://extensions.
-  - Enable Developer Mode by clicking the toggle switch next to Developer mode.
-  - Click the LOAD UNPACKED button and select the extension directory.
+    - Open the Extension Management page by navigating to chrome://extensions.
+    - Enable Developer Mode by clicking the toggle switch next to Developer mode.
+    - Click the LOAD UNPACKED button and select the extension directory.
 2. Enjoy your secure browsing experience
 
 ## Browser Extension
