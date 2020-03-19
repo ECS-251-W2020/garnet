@@ -4,6 +4,8 @@ Garnet provides a secure and performant browser isolation solution by replaying 
 
 The Garnet consist of three major components: [Browser Extension](#browser-extension), [Server](#server), [Modified Chromium](#modified-chromium).
 
+![Garnet Archetecture](https://github.com/ECS-251-W2020/final-project-sudo/blob/update-readme/garnet-architecture.png)
+
 For more details:
 - Garnet Slides: https://docs.google.com/presentation/d/1dtheCxnoi7ndXLLkkXeq51FsUDQHAIiSRylsi95hqBI/edit#slide=id.g52d3a5b53d_1_0
 - Demo: https://youtu.be/0yOjzBg866k
@@ -31,7 +33,6 @@ For more details:
   - Enable Developer Mode by clicking the toggle switch next to Developer mode.
   - Click the LOAD UNPACKED button and select the extension directory.
 2. Enjoy your secure browsing experience
-
 
 ## Browser Extension
 1. Capture and send I/O events in local browser
