@@ -29,9 +29,9 @@ For more details:
   
 ## Using Garnet Client
 1. Install the web extension in local browser
-    - Open the Extension Management page by navigating to chrome://extensions.
+    - Open the Extension Management page by navigating to `chrome://extensions`.
     - Enable Developer Mode by clicking the toggle switch next to Developer mode.
-    - Click the LOAD UNPACKED button and select the extension directory.
+    - Click the `LOAD UNPACKED` button and select the extension directory.
 2. Enjoy your secure browsing experience
 
 ## Browser Extension
