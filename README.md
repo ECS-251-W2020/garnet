@@ -45,4 +45,4 @@ For more details:
 3. Send Skia JS draw command to browser extension
 
 ## Modified Chromium
-1. Logging Skia draw commands for server to use
+1. Logging draw commands (Skia draw commands, ui/gfx commands) for server to use
