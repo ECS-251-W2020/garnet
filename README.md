@@ -2,7 +2,7 @@
 
 Garnet provides a secure and performant browser isolation solution by replaying remote browser draw commands in local browser via WebAssembly 
 
-The Garnet consist of three major components: Browser Extension, Server, Modified Chromium.
+The Garnet consist of three major components: [Browser Extension](#browser-extension), [Server](#server), [Modified Chromium](#modified-chromium).
 
 For more details:
 - Garnet Slides: https://docs.google.com/presentation/d/1dtheCxnoi7ndXLLkkXeq51FsUDQHAIiSRylsi95hqBI/edit#slide=id.g52d3a5b53d_1_0
