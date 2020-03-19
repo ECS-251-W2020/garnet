@@ -12,8 +12,20 @@ For more details:
 
 ## Project Structure
 1. [Brwoser Extension](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/client/web-extension) under `client/web-extension/`
+
+    Key files:
+    - `manifest.json`: extension manifest file which contains info such as version, name, script path
+    - `background.js`: script also run in background which delegate the request to server
+    - `index.html + index.js`: create canvas for display draw commands(from server) via WebAssembly
 2. [Server](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/server) under `server/`
+
+    Key files:
+    - `index.js`: start chromium base on request; listen to the file that Chromium write draw command to and convert the draw commands to Skia JS draw commands; send Skia JS draw command to browser extension
 3. [Modified Chromium](https://github.com/ECS-251-W2020/chromium/tree/ac814e85cb870a6b569e184c7a60a70ff3cb19f9) under `chromium @ ac814e8/`
+
+    Key files:
+    - `ui/gfx/render_text.cc`, `chromium/ui/gfx/canvas_skia.cc`: chromium internal text rendering commands
+    - `chromium/third_party/skia/src/core/SkCanvas.cpp`: SkCanvas draw commands for basic shapes and images
 
 ## Setting Up Garnet Server
 1. Install the prerequisites
@@ -37,12 +49,12 @@ For more details:
 ## Browser Extension
 1. Capture and send I/O events in local browser
 2. Verify the draw commands from server is valid (no malicious code injected)
-3. Display the draw commands which are sent from server
+3. Display the draw commands which are sent from server via WebAssembly
 
 ## Server
 1. Receive I/O events from local browser and simulate the same mouse/keyboard events on Modified Chromium
-2. Detect the draw command changes in Chromium and convert it to Skia JS draw command
+2. Listen to the file that Chromium write draw command to and convert the draw commands to Skia JS draw commands
 3. Send Skia JS draw command to browser extension
 
 ## Modified Chromium
-1. Logging draw commands (`Skia` draw commands, `ui/gfx` commands) for server to use
+1. Logging draw commands (`Skia` draw commands, `ui/gfx` commands) to a temp file which is listened by server
