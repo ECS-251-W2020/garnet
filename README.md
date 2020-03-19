@@ -53,11 +53,17 @@ Here we present where major components are located and their key files.
 
 ```
 git clone https://github.com/ECS-251-W2020/final-project-sudo.git
+cd final-project-sudo
+```
+
+3. Setup chromium submodule:
+
+```
 git submodule init
 git submodule update
 ```
 
-3. Compile the modified chromium to executable. Refer to [chromium.org](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)(skip "Get the code")
+Compile the modified chromium to executable. Refer to [chromium.org](https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md)(skip "Get the code")
 
 4. Install dependencies:
 
