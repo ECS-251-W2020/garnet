@@ -7,8 +7,8 @@ The Garnet consist of three major components: [Browser Extension](#browser-exten
 ![Garnet Archetecture](https://github.com/ECS-251-W2020/final-project-sudo/blob/update-readme/garnet-architecture.png)
 
 For more details:
-- Garnet Slides: https://docs.google.com/presentation/d/1dtheCxnoi7ndXLLkkXeq51FsUDQHAIiSRylsi95hqBI/edit#slide=id.g52d3a5b53d_1_0
-- Demo: https://youtu.be/0yOjzBg866k
+- Garnet Presentation Slides: https://docs.google.com/presentation/d/1dtheCxnoi7ndXLLkkXeq51FsUDQHAIiSRylsi95hqBI/edit#slide=id.g52d3a5b53d_1_0
+- Garnet Presentation Video + Demo: https://youtu.be/0yOjzBg866k
 
 ## Project Structure
 1. [Brwoser Extension](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/client/web-extension) under `client/web-extension/`
