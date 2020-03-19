@@ -6,12 +6,12 @@ The Garnet consist of three major components: Browser Extension, Server, Modifie
 
 For more details:
 - Garnet Slides: https://docs.google.com/presentation/d/1dtheCxnoi7ndXLLkkXeq51FsUDQHAIiSRylsi95hqBI/edit#slide=id.g52d3a5b53d_1_0
-
+- Demo: https://youtu.be/0yOjzBg866k
 
 ## Project Structure
-1. [Brwoser Extension](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/client/web-extension) under `client/web-extension`
-2. [Server](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/server) under `server`
-3. [Modified Chromium](https://github.com/ECS-251-W2020/chromium/tree/ac814e85cb870a6b569e184c7a60a70ff3cb19f9) under `chromium @ ac814e8`
+1. [Brwoser Extension](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/client/web-extension) under `client/web-extension/`
+2. [Server](https://github.com/ECS-251-W2020/final-project-sudo/tree/master/server) under `server/`
+3. [Modified Chromium](https://github.com/ECS-251-W2020/chromium/tree/ac814e85cb870a6b569e184c7a60a70ff3cb19f9) under `chromium @ ac814e8/`
 
 ## Setting Up Garnet Server
 1. Install the prerequisites
@@ -34,14 +34,14 @@ For more details:
 
 
 ## Browser Extension
-- Capture and send I/O events in local browser
-- Verify the draw commands from server is valid (no malicious code injected)
-- Display the draw commands which are sent from server
+1. Capture and send I/O events in local browser
+2. Verify the draw commands from server is valid (no malicious code injected)
+3. Display the draw commands which are sent from server
 
 ## Server
-- Receive I/O events from local browser and simulate the same mouse/keyboard events on Modified Chromium
-- Detect the draw command changes in Chromium and convert it to Skia JS draw command
-- Send Skia JS draw command to browser extension
+1. Receive I/O events from local browser and simulate the same mouse/keyboard events on Modified Chromium
+2. Detect the draw command changes in Chromium and convert it to Skia JS draw command
+3. Send Skia JS draw command to browser extension
 
 ## Modified Chromium
-- Logging Skia draw commands for server to use
+1. Logging Skia draw commands for server to use
