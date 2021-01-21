@@ -10,6 +10,6 @@
   "license": "UNLICENSED",
   "dependencies": {
     "canvaskit-wasm": "^0.13.0",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
